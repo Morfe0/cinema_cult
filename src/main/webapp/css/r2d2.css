@@ -1,0 +1,239 @@
+
+.body {
+    background: #e6e7e9;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.r2d2 {
+	margin-top:50px;
+    position: relative;
+    margin-left:165px;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+.r2d2 .head {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 93px;
+    background: #fff;
+    top: 52px;
+    overflow: hidden;
+    border: 7px solid #3a322f;
+    height: 65px;
+    width: 100px;
+    border-radius: 100px 100px 0 0;
+    z-index: 100;
+}
+.r2d2 .head .eye {
+    background: #0f74bf;
+    width: 40px;
+    height: 35px;
+    display: flex;
+    position: absolute;
+    top: -3px;
+    left: 30px;
+    -webkit-animation: eye 2s infinite;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+}
+.r2d2 .head .eye .circle-1 {
+    position: relative;
+    background: #3a322f;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+}
+.r2d2 .head .eye .circle-1 .circle-2 {
+    position: absolute;
+    background: #fff;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    left: 4px;
+    top: 5px;
+}
+.r2d2 .head .eye .circle-1 .circle-3 {
+    position: absolute;
+    background: #fff;
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    right: 4px;
+    bottom: 6px;
+}
+.r2d2 .head .list {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    display: flex;
+    top: 37px;
+    left: 0;
+    -webkit-animation: list 2s infinite;
+    z-index: -1;
+}
+.r2d2 .head .list .item {
+    background: #0f74bf;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 100%;
+    border-radius: 10px;
+}
+.r2d2 .head .list .item .circle {
+    background: #c93409;
+    border-radius: 100px;
+    width: 5px;
+    height: 5px;
+}
+.r2d2 .body {
+    position: absolute;
+    left: 93px;
+    top: 114px;
+    background: #f2f2f2;
+    border: 7px solid #3a322f;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 0 0 30px 30px;
+}
+.r2d2 .body .list {
+    width: 50px;
+}
+.r2d2 .body .list .item {
+    background: #0f74bf;
+    margin-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+}
+.r2d2 .body .oval {
+    background: #3a322f;
+    margin-top: 8px;
+    border-radius: 50px;
+    height: 35px;
+    width: 12px;
+}
+.r2d2 .arm-1 {
+	background: #fff;
+    position: absolute;
+    left: 79px;
+    top: 121px;
+    width: 45px;
+    height: 98px;
+    border-radius: 28px 0 28px 28px;
+    border: 7px solid #3a322f;
+    z-index: -1;
+}
+.r2d2 .arm-1 .divisor {
+    background: #3a322f;
+    position: absolute;
+    bottom: 33px;
+    height: 5px;
+    width: 100%;
+}
+.r2d2 .arm-2 {
+	background: #fff;
+    position: absolute;
+    right: 79px;
+    top: 121px;
+    width: 45px;
+    height: 98px;
+    border-radius: 0 28px 28px 28px;
+    border: 7px solid #3a322f;
+    z-index: -1;
+}
+.r2d2 .arm-2 .divisor {
+    background: #3a322f;
+    position: absolute;
+    bottom: 33px;
+    height: 5px;
+    width: 100%;
+}
+.r2d2 .leg {
+    position: absolute;
+    left: 126px;
+    top: 211px;
+    width: 35px;
+    height: 15px;
+    border-radius: 0 0 20px 20px;
+    background: #e5e5e5;
+    border: 7px solid #3a322f;
+    border-top: 0;
+}
+.r2d2 .shadow {
+    background: #d1d2d4;
+    position: absolute;
+    height: 10px;
+    border-radius: 100%;
+    width: 142px;
+    left: 79px;
+    bottom: 63px;
+    z-index: -10;
+}
+@-webkit-keyframes eye {
+    0%, 100% {
+        left: 25px;
+   }
+    50% {
+        left: 35px;
+   }
+}
+@-webkit-keyframes list {
+    0%, 100% {
+        left: -5px;
+   }
+    50% {
+        left: 5px;
+   }
+}
+.container-pop2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #bababa;
+}
+.hidePopup{
+  display: none;
+}
+.boxPopup2{
+	  position: absolute;
+    top:120px;
+    width:650px;
+    left: 33%;
+    z-index:999;
+   background-attachment:fixed;
+	background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 1.3rem;
+	transition:o.8s;
+	border-radius:1.6rem;
+	border: 5px solid var(--error-main);
+	height:750px
+}
+button{
+	margin-top:15px;
+	font-size:24px;
+}
+

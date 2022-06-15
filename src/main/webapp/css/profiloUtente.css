@@ -1,0 +1,115 @@
+@import url("./style.css");
+.cardWrap {
+    color: var(--primary-contrast-text);
+    font-family: sans-serif;
+    display: grid;
+    row-gap: 50px;
+    justify-items: center;
+}
+
+.biglietto{
+    margin-top: 15px;
+}
+.card-biglietto {
+    background: linear-gradient(to bottom, var(--primary-dark) 0%, var(--primary-main) 26%, var(--background-paper) 26%, var(--background-paper) 100%);
+    float: left;
+    height: 235px;
+    position: relative;
+    padding: 1em;
+}
+.cardLeft {
+    height: 235px;
+    width: 300px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.cardRight {
+    border-left: 0.18em dashed var(--background-default);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cardRight:before, .cardRight:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.9em;
+    height: 0.9em;
+    background:var(--background-default);
+    border-radius: 50%;
+    left: -0.5em;
+}
+.cardRight:before {
+    top: -0.4em;
+}
+.cardRight:after {
+    bottom: -0.4em;
+}
+h1 {
+    font-size: 22px;
+    margin-top: 0;
+}
+h1 span {
+    font-weight: normal;
+}
+.title, .name, .seat, .time {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.title h2, .name h2, .seat h2, .time h2 {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin: 0;
+}
+.title span, .name span, .seat span, .time span {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+.title {
+    margin: 2em 0 0 0;
+}
+.name, .seat {
+    margin: 0.7em 0 0 0;
+}
+.time {
+    margin: 0.7em 0 0 1em;
+}
+.seat, .time {
+    float: left;
+}
+.eye{
+    display: grid;
+    justify-items: center;
+}
+.eye .logo__image{
+    position: relative;
+    width: 50px;
+    z-index: 1;
+}
+
+.number {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.number h3 {
+    color: var(--secondary-main);
+    margin: 0.9em 0 0 0;
+    font-size: 36px;
+}
+.number span {
+    display: block;
+    color: var(--text-secondary);
+}
+.btn-form{
+    margin-left: auto;
+    padding: 6px 10px;
+    background: var(--primary-main);
+    color: var(--primary-contrast-text);
+    font-size: 14px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.btn-form:hover{
+    background: var(--primary-light);
+}

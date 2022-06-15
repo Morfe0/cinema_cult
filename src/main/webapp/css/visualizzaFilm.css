@@ -1,0 +1,145 @@
+@import url("./style.css");
+
+
+
+  /*sliders*/
+  section{
+      padding-top: 10rem;
+  }
+  .slider-container{
+    width: 100%;
+    position: relative;
+    top: 80px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .slider-img{
+    width:300px;
+    height:450px;
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .slider-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position: center;
+  }
+  .slider-p{
+    width: 1000px;
+    margin-left: 50px;
+    margin-right: 25px;
+    text-align: justify;
+    overflow:hidden;
+    object-fit:cover;
+    object-position: center;
+  }
+  .slider-details{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    background:var(--background-paper);
+    height: 100%;
+    width:1350px;
+    border-radius:15px;
+  } 
+  .slider-details strong{
+    color: var(--text-primary);
+    font-size: 40px;;
+    font-weight:600;
+  }
+  
+
+  .slider-details p{
+    color:var(--text-secondary);
+    font-size: 19px;
+  }    
+  .movie-regista {
+    display: flex;
+    align-items: center;
+  }
+
+  .movie-regista p{
+    color: var(--text-secondary);
+    margin: 0px 4px;
+    font-size: 26px;
+  }
+  .movie-cast{
+    display: flex;
+    align-items: center;
+  }
+  .movie-cast p{
+    color: var(--text-secondary);
+    margin: 0px 4px;
+    font-size: 14px;
+  }
+  .movie-spettacolo{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .movie-spettacolo p{
+    color: var(--secondary-dark);
+    margin: 0px 4px;
+    font-size: 19px;
+  }
+
+  .card-btns{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+  }
+  .card-btns a{
+   min-width:200px;
+   height:65px;
+   border-radius:10px;
+   margin-top: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+   display:flex;
+   justify-content:center;
+    align-items:center;
+   color:var(--text-primary);
+   font-size: 18px;
+  }
+  .play-btn{
+     background-color: var(--main-color);
+  }
+  .play-btn:hover{
+    background: var(--hover-color);
+}
+ 
+ 
+.swiper {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.swiper-slide {
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

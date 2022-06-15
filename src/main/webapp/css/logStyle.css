@@ -1,0 +1,287 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+
+  /**
+  * colors
+  */
+
+  /*
+  * background
+  */
+  --background-default: #EDF2F4;
+  --background-paper: #fff;
+  /*
+  * text
+  */
+  --text-primary: rgba(0, 0, 0, 0.87);
+  --text-secondary: rgba(0, 0, 0, 0.54);
+  --text-disabled: rgba(0, 0, 0, 0.38);
+  --text-hint: rgba(0, 0, 0, 0.38);
+  /*
+  * primary
+  */
+  --primary-main: #2B2D42;
+  --primary-light: rgb(85, 87, 103);
+  --primary-dark: rgb(30, 31, 46);
+  --primary-contrast-text: #edf2f4;
+  /*
+  * secondary
+  */
+  --secondary-main: #D90429;
+  --secondary-light: rgb(224, 54, 83);
+  --secondary-dark: rgb(151, 2, 28);
+  --secondary-contrast-text: #fff;
+  /*
+  * error
+  */
+  --error-main: #EF233C;
+  --error-light: rgb(242, 79, 99);
+  --error-dark: rgb(167, 24, 42);
+  --error-contrast-text: #fff;
+  /*
+  * warning
+  */
+  --warning-main: #ff9800;
+  --warning-light: #ffb74d;
+  --warning-dark: #f57c00;
+  --warning-contrast-text: rgba(0, 0, 0, 0.87);
+  /*
+  * info
+  */
+  --info-main: #2196f3;
+  --info-light: #64b5f6;
+  --info-dark: #1976d2;
+  --info-contrast-text: #fff;
+  /*
+  * succes
+  */
+  --succes-main: #4caf50;
+  --succes-light: #81c784;
+  --succes-dark: #388e3c;
+  --succes-contrast-text: rgba(0, 0, 0, 0.87);
+  /*
+  * divider
+  */
+  --divider: rgba(0, 0, 0, 0.12);
+
+
+
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: var(--background-default);
+  z-index: -999;
+}
+
+.wrapper{
+  overflow: hidden;
+  background: var(--background-paper);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.571);
+  
+}
+.title-text{
+  text-align: center;
+}
+.wrapper .title{
+  color: var(--text-primary);
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper .slide-controls{
+  background-color: var(--background-paper);
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid  var(--primary-light);
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: var(--secondary-contrast-text);
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+}
+.slide-controls label.signup{
+  color: var(--text-primary);
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: var(--primary-main);
+}
+.slide-controls .registrazione{
+  color: var(--text-primary);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: var(--primary-contrast-text);
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: var(--text-primary);
+}
+#login:checked ~ label.signup{
+  color: var(--text-primary);
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+
+.form-inner form .field{
+  position: relative;
+  height: 50px;
+  margin-top: 20px;
+}
+.form-inner form .field input,.input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-light);
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: var(--primary-dark);
+}
+.form-inner form .field input::placeholder{
+  color: var(--text-hint);
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: var(--text-hint);
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: var(--secondary-dark);
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--primary-main);
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  border-radius: 10px;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--primary-contrast-text);
+  padding-left: 0;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+form .btn input[type="submit"]:hover{
+  background-color: var(--primary-light);
+}
+a{
+  text-decoration: none;
+}
+.torna-home,button{
+  text-decoration: none;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--primary-contrast-text);
+
+}
+button{
+
+    padding: 9px 14px;
+    height: 45px;
+    background: var(--secondary-dark);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+button:hover{
+  background-color: var(--secondary-light);
+}
+
+.allinea{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.field label{
+  position: absolute;
+  top: 14px;
+  left: 15px; 
+  color:#999;
+  text-transform: capitalize;
+  transition: top .3s;
+}
+.field input:focus ~ label,.field input:valid ~ label {
+  top:-14px;
+  background-color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-dark);
+  border-bottom-width: 2px;
+  font-size: 12px;
+}
